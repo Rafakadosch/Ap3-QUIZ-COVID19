@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="quiz.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/6e6c70339f.js" crossorigin="anonymous"></script>
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="mobile-menu">                
+                <div class="line1"></div>
+                <div class="line2"></div> 
+                <div class="line3"></div> 
+
+            </div>
+            <ul class="nav-list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Notícia</a></li>
+                <li><a href="">Quiz</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+ <main class="tela-principal">
+
+        <section class='conteudos'>
+
+            <h1>Quiz</h1>
+             <article class='centro' id='instrucoes'>
+                Leia a questão e clique na resposta correta
+            </article>
+            <div class="container">
+                    <div id="minhaImagem" class="image">
+                     <img src="imagens/1.jpg">
+
+                </div>
+                
+                
+                
+
+                 <article class='questoes'>
+                
+                <header  class='questao'>
+                    <span id='numQuestao'></span>
+                    <h2 id='pergunta'></h2>
+                </header>
+                
+                
+                
+                <div class='corpo'>
+                    <ol  type='A' id='alternativas'>
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+  
+                    
+                    </ol>
+                </div>
+               
+            
+            </article>
+            
+            <article id='aviso' class='centro'>
+                <input type="range" value='1' min='1' max='10' step='1'
+                name="progresso" id="progresso" disabled
+                /> <br>
+                <span id='numero'></span> de <span id='total'></span>
+            </article>
+        
+            <footer id='autoria' class='centro'>Rafael Magalhães &copy; 2021</footer>
+
+        </section>
+
+    </main>
+<audio preload src="positive.mp3" id='somAcerto'></audio>
+<audio preload src="negative.mp3" id='somErro'></audio>
+<audio preload src="aplausos.mp3" id='somAplausos'></audio>
+<!-- JS externo -->
+<script src="quizap3.js"></script>
+
+    
+
+
+
+
+
+</body>
+</html>
